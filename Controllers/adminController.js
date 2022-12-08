@@ -167,14 +167,7 @@ const userDelete = async (req, res) => {
 }
 // Admin Logout
 const adminLogout = (req, res) => {
-    // req.session.destroy((error)=>{
-    //     if(error){
-    //         console.log(error.message)
-    //     }else{
-    //         console.log(' Admin session ends')
-    //         res.redirect('/admin');
-    //     }
-    // })
+ 
     req.session.admin=false
     console.log(' Admin session ends')
     res.redirect('/admin');

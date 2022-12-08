@@ -92,15 +92,6 @@ const userHome = (req, res) => {
 }
 
 const userLogout=(req,res)=>{
-    // req.session.destroy((error)=>{
-    //     if(error){
-    //         console.log(error.message)
-    //     }
-    //     else{
-    //         console.log('User session ends')
-    //         res.redirect('/');
-    //     }
-    // })
     req.session.user=false
     console.log(' user session ends')
     res.redirect('/');
